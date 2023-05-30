@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Move the Perl modules to the appropriate 
-# export PERL5LIB=/$PREFIX/bin/:$PERL5LIB
+export PERL5LIB=/$PREFIX/:$PERL5LIB
 cp -r ./RetroSeq/ $PREFIX/
 cp ./bin/retroseq.pl $PREFIX/bin/retroseq.pl
 
