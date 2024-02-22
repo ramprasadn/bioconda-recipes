@@ -8,7 +8,7 @@ mkdir -p $PACKAGE_HOME
 
 git clone https://github.com/broadinstitute/gatk.git gatk-${PKG_VERSION}
 cd gatk-${PKG_VERSION}
-git lfs install
+git lfs install --force
 git lfs pull --include src/main/resources/large
 
 chmod +x gatk
