@@ -14,6 +14,8 @@ build:
 requirements:
   build:
     - openjdk =17
+    - git
+    - git-lfs
   host:
     - r-base =3.6
     - r-gplots
@@ -22,8 +24,6 @@ requirements:
     - r-reshape
     - setuptools
     - python
-    - git
-    - git-lfs
   run:
     - openjdk =17
     - python
