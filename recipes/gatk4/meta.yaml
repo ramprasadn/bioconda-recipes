@@ -1,18 +1,18 @@
 {% set name = "GATK4" %}
 {% set version = "4.5.0.0" %}
-{% set sha256 = "dc1a4471e8bb566397db9894ca18acbf8f40f3fc312c8fad9a8c5390c218e916" %}
+{% set sha256 = "39b09548ada317b29f19d6cbc0267301ee3565d575a5d79008a0168e679b98d2" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://github.com/broadinstitute/gatk/releases/download/{{ version }}/gatk-{{ version }}.zip
+  url: https://github.com/broadinstitute/gatk/archive/refs/tags/{{ version }}.zip
   sha256: {{ sha256 }}
 
 build:
   noarch: generic
-  number: 0
+  number: 1
   run_exports:
      - {{ pin_subpackage('gatk4', max_pin="x") }}
 
@@ -23,7 +23,8 @@ requirements:
     - r-ggplot2
     - r-gsalib
     - r-reshape
-    - gcnvkernel =0.8
+    - setuptools
+    - python
   run:
     - openjdk >=17,<18
     - python
@@ -32,7 +33,6 @@ requirements:
     - r-ggplot2
     - r-gsalib
     - r-reshape
-    - gcnvkernel =0.8
 
 test:
   commands:
