@@ -23,6 +23,7 @@ requirements:
     - r-reshape
     - setuptools
     - python
+    - git-lfs
   run:
     - openjdk =17
     - python
