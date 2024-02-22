@@ -21,7 +21,6 @@ requirements:
     - setuptools
     - python
     - git-lfs
-    - openjdk >=17,<18
   run:
     - openjdk >=17,<18
     - python
