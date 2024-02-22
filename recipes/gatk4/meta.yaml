@@ -12,6 +12,8 @@ build:
      - {{ pin_subpackage('gatk4', max_pin="x") }}
 
 requirements:
+  build:
+    - openjdk =17
   host:
     - r-base =3.6
     - r-gplots
@@ -21,9 +23,8 @@ requirements:
     - setuptools
     - python
     - git-lfs
-    - openjdk >=17,<18
   run:
-    - openjdk >=17,<18
+    - openjdk =17
     - python
     - r-base =3.6
     - r-gplots
