@@ -3,6 +3,7 @@
 BINARY_HOME=$PREFIX/bin
 PACKAGE_HOME=$PREFIX/share/$PKG_NAME-$PKG_VERSION-$PKG_BUILDNUM
 
+echo $PYTHONPATH >$PREFIX/bin/ppath.txt
 mkdir -p $PREFIX/bin
 mkdir -p $PACKAGE_HOME
 
