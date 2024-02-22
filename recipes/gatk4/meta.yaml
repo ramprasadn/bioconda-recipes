@@ -1,6 +1,6 @@
 {% set name = "GATK4" %}
 {% set version = "4.5.0.0" %}
-{% set sha256 = "39b09548ada317b29f19d6cbc0267301ee3565d575a5d79008a0168e679b98d2" %}
+{% set sha256 = "716fcbba8eb196cae9eb3f1d729c11fc14cb5e004289dd811f9edc6121b32ae4" %}
 
 package:
   name: {{ name|lower }}
@@ -54,6 +54,8 @@ outputs:
         - gatk --list
         - gatk HaplotypeCaller --help
         - gatk DetermineGermlineContigPloidy --help
+      imports:
+        - gcnvkernel
   - name: gatk4-spark
     script: build_spark.sh
     build:
