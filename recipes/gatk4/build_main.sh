@@ -6,8 +6,12 @@ PACKAGE_HOME=$PREFIX/share/$PKG_NAME-$PKG_VERSION-$PKG_BUILDNUM
 mkdir -p $PREFIX/bin
 mkdir -p $PACKAGE_HOME
 
+git clone https://github.com/broadinstitute/gatk.git gatk-${PKG_VERSION}
+cd gatk-${PKG_VERSION}
+
 chmod +x gatk
 cp gatk ${PACKAGE_HOME}/gatk
+./gradlew localJar
 cp gatk-*-local.jar $PACKAGE_HOME
 cd src/main/python/org/broadinstitute/hellbender/
 

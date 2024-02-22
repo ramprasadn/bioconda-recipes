@@ -1,14 +1,9 @@
 {% set name = "GATK4" %}
 {% set version = "4.5.0.0" %}
-{% set sha256 = "716fcbba8eb196cae9eb3f1d729c11fc14cb5e004289dd811f9edc6121b32ae4" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
-
-source:
-  url: https://github.com/broadinstitute/gatk/archive/refs/tags/{{ version }}.zip
-  sha256: {{ sha256 }}
 
 build:
   noarch: generic
@@ -25,6 +20,7 @@ requirements:
     - r-reshape
     - setuptools
     - python
+    - git-lfs
   run:
     - openjdk >=17,<18
     - python
