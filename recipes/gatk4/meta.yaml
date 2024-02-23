@@ -19,7 +19,7 @@ build:
 requirements:
   host:
     - r-base =3.6
-    - python = 3.6
+    - python =3.6
     - r-gplots
     - r-ggplot2
     - r-gsalib
