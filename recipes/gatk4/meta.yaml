@@ -17,12 +17,6 @@ build:
   run_exports:
      - {{ pin_subpackage('gatk4', max_pin="x") }}
 
-requirements:
-  run:
-    - gatk4
-    - gatk4-spark
-    - unzip
-
 test:
   commands:
     - gatk -h
