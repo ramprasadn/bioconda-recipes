@@ -17,8 +17,6 @@ build:
      - {{ pin_subpackage('gatk4', max_pin="x") }}
 
 requirements:
-  build:
-    - python
   host:
     - r-base =3.6
     - python
@@ -27,7 +25,7 @@ requirements:
     - r-gsalib
     - r-reshape
     - unzip
-    - numpy =1.21.0
+    - numpy =1.17.5 
     - theano =1.0.4
     - scipy =1.2.0
     - pymc3 =3.1
