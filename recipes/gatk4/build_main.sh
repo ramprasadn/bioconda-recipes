@@ -11,13 +11,6 @@ chmod +x gatk
 cp gatk ${PACKAGE_HOME}/gatk
 cp gatk-*-local.jar $PACKAGE_HOME
 
-pip install --no-index --ignore-installed numpy==1.21.0
-pip install --no-index scipy==1.2.0
-pip install pymc3==3.1
-pip install Theano==1.0.4
-pip install --no-index tqdm==4.19.5
-pip install --no-index PyVCF==0.6.8
-
 unzip gatkPythonPackageArchive.zip -d gatkPythonPackageArchive
 cd gatkPythonPackageArchive
 python setup_gcnvkernel.py install

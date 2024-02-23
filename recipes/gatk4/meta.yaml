@@ -25,6 +25,11 @@ requirements:
     - r-reshape
     - unzip
     - pip
+    - numpy =1.21.0
+    - theano =1.0.4
+    - scipy =1.2.0
+    - pymc3 =3.1
+    - pyvcf =0.6.8
   run:
     - openjdk >=17,<18
     - python
@@ -33,6 +38,11 @@ requirements:
     - r-ggplot2
     - r-gsalib
     - r-reshape
+    - numpy =1.21.0
+    - theano =1.0.4
+    - scipy =1.2.0
+    - pymc3 =3.1
+    - pyvcf =0.6.8
 
 test:
   commands:
