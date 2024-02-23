@@ -19,7 +19,7 @@ build:
 requirements:
   host:
     - r-base =3.6
-    - python
+    - python = 3.6
     - r-gplots
     - r-ggplot2
     - r-gsalib
@@ -32,7 +32,7 @@ requirements:
     - pyvcf =0.6.8
   run:
     - openjdk >=17,<18
-    - python
+    - python =3.6
     - r-base =3.6
     - r-gplots
     - r-ggplot2
