@@ -23,6 +23,7 @@ requirements:
     - r-ggplot2
     - r-gsalib
     - r-reshape
+    - unzip
   run:
     - openjdk >=17,<18
     - python
