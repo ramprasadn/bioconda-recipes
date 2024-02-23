@@ -29,11 +29,12 @@ outputs:
     script: build_main.sh
     requirements:
       build:
-        - openjdk >=17,<18
+        - openjdk =17
         - python =3.6
         - matplotlib-base
         - gcnvkernel
       run:
+        - openjdk =17
         - gcnvkernel
         - tensorflow =1.15.0
     test:
@@ -48,12 +49,13 @@ outputs:
       noarch: generic
     requirements:
       build:
-        - openjdk >=17,<18
+        - openjdk =17
         - python =3.6
         - matplotlib-base
         - gcnvkernel
         - {{ pin_subpackage("gatk4", exact=True) }}
       run:
+        - openjdk =17
         - gcnvkernel
         - tensorflow =1.15.0
     test:
