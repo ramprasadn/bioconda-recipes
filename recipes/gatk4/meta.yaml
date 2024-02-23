@@ -18,7 +18,8 @@ build:
      - {{ pin_subpackage('gatk4', max_pin="x") }}
 
 requirements:
-  - python =3.6
+  host:
+    - python =3.6
 
 test:
   commands:
