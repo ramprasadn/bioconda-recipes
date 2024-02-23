@@ -17,14 +17,16 @@ build:
      - {{ pin_subpackage('gatk4', max_pin="x") }}
 
 requirements:
+  build:
+    - python
   host:
     - r-base =3.6
+    - python
     - r-gplots
     - r-ggplot2
     - r-gsalib
     - r-reshape
     - unzip
-    - pip
     - numpy =1.21.0
     - theano =1.0.4
     - scipy =1.2.0
