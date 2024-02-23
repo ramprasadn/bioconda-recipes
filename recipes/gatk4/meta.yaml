@@ -17,10 +17,6 @@ build:
   run_exports:
      - {{ pin_subpackage('gatk4', max_pin="x") }}
 
-requirements:
-  host:
-    - python =3.6
-
 test:
   commands:
     - gatk -h
@@ -35,9 +31,9 @@ outputs:
       build:
         - openjdk >=17,<18
         - python =3.6
+        - matplotlib-base
       run:
         - gcnvkernel
-        - python =3.6
         - tensorflow =1.15.0
     test:
       commands:
@@ -53,9 +49,9 @@ outputs:
       build:
         - openjdk >=17,<18
         - python =3.6
+        - matplotlib-base
         - {{ pin_subpackage("gatk4", exact=True) }}
       run:
-        - python =3.6
         - gcnvkernel
         - tensorflow =1.15.0
     test:
