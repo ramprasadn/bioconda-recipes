@@ -24,6 +24,7 @@ requirements:
     - r-gsalib
     - r-reshape
     - unzip
+    - pip
   run:
     - openjdk >=17,<18
     - python
