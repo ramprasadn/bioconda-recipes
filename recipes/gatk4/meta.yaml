@@ -37,6 +37,7 @@ outputs:
         - python =3.6
       run:
         - gcnvkernel
+        - python =3.6
         - tensorflow =1.15.0
     test:
       commands:
@@ -54,6 +55,7 @@ outputs:
         - python =3.6
         - {{ pin_subpackage("gatk4", exact=True) }}
       run:
+        - python =3.6
         - gcnvkernel
         - tensorflow =1.15.0
     test:
