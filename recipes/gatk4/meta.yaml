@@ -18,32 +18,10 @@ build:
      - {{ pin_subpackage('gatk4', max_pin="x") }}
 
 requirements:
-  host:
-    - r-base =3.6
-    - python =3.6
-    - r-gplots
-    - r-ggplot2
-    - r-gsalib
-    - r-reshape
-    - unzip
-    - numpy =1.17.5 
-    - theano =1.0.4
-    - scipy =1.2.0
-    - pymc3 =3.1
-    - pyvcf =0.6.8
   run:
-    - openjdk >=17,<18
-    - python =3.6
-    - r-base =3.6
-    - r-gplots
-    - r-ggplot2
-    - r-gsalib
-    - r-reshape
-    - numpy =1.21.0
-    - theano =1.0.4
-    - scipy =1.2.0
-    - pymc3 =3.1
-    - pyvcf =0.6.8
+    - gatk4
+    - gatk4-spark
+    - unzip
 
 test:
   commands:
@@ -56,9 +34,12 @@ outputs:
   - name: gatk4
     script: build_main.sh
     requirements:
-      run:
+      build:
         - openjdk >=17,<18
-        - python
+        - python =3.6
+      run:
+        - gcnvkernel
+        - tensorflow =1.15.0
     test:
       commands:
         - gatk -h
@@ -70,10 +51,13 @@ outputs:
     build:
       noarch: generic
     requirements:
-      run:
+      build:
         - openjdk >=17,<18
-        - python
+        - python =3.6
         - {{ pin_subpackage("gatk4", exact=True) }}
+      run:
+        - gcnvkernel
+        - tensorflow =1.15.0
     test:
       commands:
         - gatk -h
