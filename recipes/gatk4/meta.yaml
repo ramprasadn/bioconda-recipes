@@ -53,11 +53,11 @@ outputs:
         - python =3.6
         - matplotlib-base
         - gcnvkernel
-        - {{ pin_subpackage("gatk4", exact=True) }}
       run:
         - openjdk =17
         - gcnvkernel
         - tensorflow =1.15.0
+        - {{ pin_subpackage("gatk4", exact=True) }}
     test:
       commands:
         - gatk -h
