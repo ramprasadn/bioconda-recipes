@@ -16,12 +16,6 @@ build:
   run_exports:
      - {{ pin_subpackage('gatk4', max_pin="x") }}
 
-requirements:
-  build:
-    - openjdk =17
-    - python =3.6
-    - unzip
-
 outputs:
   - name: gatk4
     script: build_main.sh
@@ -30,7 +24,7 @@ outputs:
         - openjdk =17
         - python =3.6
         - unzip
-        - conda-forge::python=3.6.10
+      host:
         - conda-forge::pip=21.3.1
         - conda-forge::mkl=2019.5 
         - conda-forge::mkl-service=2.3.0
@@ -61,7 +55,6 @@ outputs:
         - pyvcf=0.6.8
         - bioconda::pysam=0.15.3
       run:
-        - conda-forge::python=3.6.10
         - conda-forge::pip=21.3.1
         - conda-forge::mkl=2019.5 
         - conda-forge::mkl-service=2.3.0
