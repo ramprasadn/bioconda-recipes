@@ -20,11 +20,9 @@ outputs:
   - name: gatk4
     script: build_main.sh
     requirements:
-      build:
         - openjdk =17
         - python =3.6
         - unzip
-      run:
         - conda-forge::pip=21.3.1
         - conda-forge::mkl=2019.5 
         - conda-forge::mkl-service=2.3.0
