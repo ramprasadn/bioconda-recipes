@@ -6,17 +6,15 @@ PACKAGE_HOME=$PREFIX/share/$PKG_NAME-$PKG_VERSION-$PKG_BUILDNUM
 mkdir -p $PREFIX/bin
 mkdir -p $PACKAGE_HOME
 
+PYTHONPATH=$PYTHONPATH:/usr/local/lib/python3.6/site-packages/gatkpythonpackages-0.1-py3.6.egg/
 #sed -i.bak 's#!/usr/bin/env python#!/opt/anaconda1anaconda2anaconda3/bin/python#' gatk
 chmod +x gatk
 cp gatk ${PACKAGE_HOME}/gatk
 cp gatk-*-local.jar $PACKAGE_HOME
 
-#unzip gatkPythonPackageArchive.zip -d gatkPythonPackageArchive
-#cd gatkPythonPackageArchive
-#python setup_gcnvkernel.py install
-#python setup_vqsr_cnn.py install
-#python setup.py install
+unzip gatkPythonPackageArchive.zip -d gatkPythonPackageArchive
+cd gatkPythonPackageArchive
+python setup.py install
 
 # Does not install the spark jars, this is done in the `build_spark.sh`
-
 ln -s $PACKAGE_HOME/gatk $PREFIX/bin
