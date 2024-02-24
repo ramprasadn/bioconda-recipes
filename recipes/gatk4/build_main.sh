@@ -6,7 +6,7 @@ PACKAGE_HOME=$PREFIX/share/$PKG_NAME-$PKG_VERSION-$PKG_BUILDNUM
 mkdir -p $PREFIX/bin
 mkdir -p $PACKAGE_HOME
 
-PYTHONPATH=$PYTHONPATH:/usr/local/lib/python3.6/site-packages/gatkpythonpackages-0.1-py3.6.egg/
+PYTHONPATH=$PYTHONPATH:$PREFIX/lib/python3.6/site-packages/
 #sed -i.bak 's#!/usr/bin/env python#!/opt/anaconda1anaconda2anaconda3/bin/python#' gatk
 chmod +x gatk
 cp gatk ${PACKAGE_HOME}/gatk
