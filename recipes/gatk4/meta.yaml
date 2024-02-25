@@ -24,8 +24,6 @@ outputs:
         - python =3.6
         - unzip
         - gcnvkernel =0.8
-      run:
-        - gcnvkernel =0.8
 
     test:
       commands:
