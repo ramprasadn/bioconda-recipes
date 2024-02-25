@@ -20,9 +20,13 @@ outputs:
   - name: gatk4
     script: build_main.sh
     requirements:
+      build:
         - openjdk =17
         - python =3.6
         - unzip
+      host:
+        - gcnvkernel =0.8
+      run:
         - gcnvkernel =0.8
 
     test:
